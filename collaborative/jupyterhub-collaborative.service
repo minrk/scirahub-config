@@ -1,0 +1,20 @@
+[Unit]
+After=network.target
+
+[Service]
+User=root
+Restart=always
+WorkingDirectory=/srv/jupyterhub/collaborative
+# Protect bits that are normally shared across the system
+PrivateTmp=yes
+PrivateDevices=yes
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+Environment=SHELL=/bin/bash
+# Run upgrade-db before starting, in case Hub version has changed
+# This is a no-op when no db exists or no upgrades are needed
+ExecStart=/usr/bin/python3 -m jupyterhub
+
+[Install]
+# Start service when system boots
+WantedBy=multi-user.target
