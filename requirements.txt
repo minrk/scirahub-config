@@ -13,7 +13,10 @@ alembic==1.9.2
 anyio==3.6.2
     # via jupyter-server
 argon2-cffi==21.3.0
-    # via jupyter-server
+    # via
+    #   jupyter-server
+    #   nbclassic
+    #   notebook
 argon2-cffi-bindings==21.2.0
     # via argon2-cffi
 arrow==1.2.3
@@ -22,8 +25,6 @@ asttokens==2.2.1
     # via stack-data
 async-generator==1.10
     # via jupyterhub
-async-lru==1.0.3
-    # via jupyterlab
 attrs==22.2.0
     # via jsonschema
 babel==2.11.0
@@ -51,13 +52,15 @@ cryptography==39.0.0
 debugpy==1.6.5
     # via ipykernel
 decorator==5.1.1
-    # via ipython
+    # via
+    #   ipyparallel
+    #   ipython
 defusedxml==0.7.1
     # via nbconvert
 entrypoints==0.4
     # via
+    #   ipyparallel
     #   jupyter-client
-    #   jupyter-lsp
 executing==1.2.0
     # via stack-data
 fastjsonschema==2.16.2
@@ -76,18 +79,28 @@ importlib-metadata==6.0.0
     #   alembic
     #   jupyter-ydoc
     #   jupyterhub
-    #   jupyterlab
     #   jupyterlab-server
     #   nbconvert
 importlib-resources==5.10.2
     # via
     #   alembic
     #   jsonschema
-    #   jupyterlab
 ipykernel==6.20.2
-    # via jupyterlab
+    # via
+    #   ipyparallel
+    #   nbclassic
+    #   notebook
+ipyparallel==8.4.1
+    # via -r requirements.in
 ipython==8.8.0
-    # via ipykernel
+    # via
+    #   ipykernel
+    #   ipyparallel
+    #   jupyterlab
+ipython-genutils==0.2.0
+    # via
+    #   nbclassic
+    #   notebook
 isoduration==20.11.0
     # via jsonschema
 jedi==0.18.2
@@ -98,7 +111,9 @@ jinja2==3.1.2
     #   jupyterhub
     #   jupyterlab
     #   jupyterlab-server
+    #   nbclassic
     #   nbconvert
+    #   notebook
 json5==0.9.11
     # via jupyterlab-server
 jsonpointer==2.3
@@ -112,29 +127,32 @@ jsonschema[format-nongpl]==4.17.3
 jupyter-client==7.4.9
     # via
     #   ipykernel
+    #   ipyparallel
     #   jupyter-server
+    #   nbclassic
     #   nbclient
+    #   notebook
 jupyter-core==5.1.3
     # via
     #   jupyter-client
     #   jupyter-server
     #   jupyterlab
+    #   nbclassic
     #   nbclient
     #   nbconvert
     #   nbformat
+    #   notebook
 jupyter-events==0.5.0
     # via
     #   jupyter-server
     #   jupyter-server-fileid
-jupyter-lsp==1.5.1
-    # via jupyterlab
 jupyter-server==2.1.0
     # via
     #   -r requirements.in
-    #   jupyter-lsp
     #   jupyter-server-fileid
     #   jupyterlab
     #   jupyterlab-server
+    #   nbclassic
     #   notebook-shim
 jupyter-server-fileid==0.6.0
     # via jupyter-server-ydoc
@@ -148,7 +166,7 @@ jupyter-ydoc==0.2.2
     # via jupyter-server-ydoc
 jupyterhub==3.1.0
     # via -r requirements.in
-jupyterlab==4.0.0a32
+jupyterlab==3.6.0rc0
     # via -r requirements.in
 jupyterlab-pygments==0.2.2
     # via nbconvert
@@ -167,21 +185,35 @@ matplotlib-inline==0.1.6
     #   ipython
 mistune==2.0.4
     # via nbconvert
+nbclassic==0.4.8
+    # via
+    #   -r requirements.in
+    #   jupyterlab
+    #   notebook
 nbclient==0.7.2
     # via nbconvert
 nbconvert==7.2.8
-    # via jupyter-server
+    # via
+    #   jupyter-server
+    #   nbclassic
+    #   notebook
 nbformat==5.7.3
     # via
     #   jupyter-server
+    #   nbclassic
     #   nbclient
     #   nbconvert
+    #   notebook
 nest-asyncio==1.5.6
     # via
     #   ipykernel
     #   jupyter-client
-notebook-shim==0.2.2
+    #   nbclassic
+    #   notebook
+notebook==6.5.2
     # via jupyterlab
+notebook-shim==0.2.2
+    # via nbclassic
 oauthlib==3.2.2
     # via jupyterhub
 packaging==23.0
@@ -210,10 +242,14 @@ prometheus-client==0.15.0
     # via
     #   jupyter-server
     #   jupyterhub
+    #   nbclassic
+    #   notebook
 prompt-toolkit==3.0.36
     # via ipython
 psutil==5.9.4
-    # via ipykernel
+    # via
+    #   ipykernel
+    #   ipyparallel
 ptyprocess==0.7.0
     # via
     #   pexpect
@@ -233,6 +269,7 @@ pyrsistent==0.19.3
 python-dateutil==2.8.2
     # via
     #   arrow
+    #   ipyparallel
     #   jupyter-client
     #   jupyterhub
 python-json-logger==2.0.4
@@ -246,8 +283,11 @@ pyyaml==6.0
 pyzmq==25.0.0
     # via
     #   ipykernel
+    #   ipyparallel
     #   jupyter-client
     #   jupyter-server
+    #   nbclassic
+    #   notebook
 requests==2.28.2
     # via
     #   jupyterhub
@@ -261,7 +301,10 @@ ruamel-yaml==0.17.21
 ruamel-yaml-clib==0.2.7
     # via ruamel-yaml
 send2trash==1.8.0
-    # via jupyter-server
+    # via
+    #   jupyter-server
+    #   nbclassic
+    #   notebook
 six==1.16.0
     # via
     #   asttokens
@@ -282,6 +325,8 @@ terminado==0.17.1
     # via
     #   jupyter-server
     #   jupyter-server-terminals
+    #   nbclassic
+    #   notebook
 tinycss2==1.2.1
     # via nbconvert
 tomli==2.0.1
@@ -289,15 +334,21 @@ tomli==2.0.1
 tornado==6.2
     # via
     #   ipykernel
+    #   ipyparallel
     #   jupyter-client
     #   jupyter-server
     #   jupyterhub
     #   jupyterlab
+    #   nbclassic
+    #   notebook
     #   terminado
+tqdm==4.64.1
+    # via ipyparallel
 traitlets==5.8.1
     # via
     #   comm
     #   ipykernel
+    #   ipyparallel
     #   ipython
     #   jupyter-client
     #   jupyter-core
@@ -305,11 +356,12 @@ traitlets==5.8.1
     #   jupyter-server
     #   jupyter-telemetry
     #   jupyterhub
-    #   jupyterlab
     #   matplotlib-inline
+    #   nbclassic
     #   nbclient
     #   nbconvert
     #   nbformat
+    #   notebook
 uri-template==1.2.0
     # via jsonschema
 urllib3==1.26.14
@@ -329,9 +381,7 @@ y-py==0.5.5
     #   jupyter-ydoc
     #   ypy-websocket
 ypy-websocket==0.8.2
-    # via
-    #   jupyter-server-ydoc
-    #   jupyterlab
+    # via jupyter-server-ydoc
 zipp==3.11.0
     # via
     #   importlib-metadata
