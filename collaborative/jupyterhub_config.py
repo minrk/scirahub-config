@@ -47,7 +47,7 @@ c.JupyterHub.load_roles = [
         "scopes": [
             "access:servers",
         ],
-        "users": ["minrk", "rcthomas", "shreyas", "minrk-admin"],
+        "users": ["minrk-admin"],
     },
 ]
 

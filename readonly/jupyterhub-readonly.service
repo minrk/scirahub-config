@@ -12,9 +12,7 @@ PrivateDevices=yes
 ProtectKernelTunables=yes
 ProtectKernelModules=yes
 Environment=SHELL=/bin/bash
-# Run upgrade-db before starting, in case Hub version has changed
-# This is a no-op when no db exists or no upgrades are needed
-ExecStart=/usr/bin/python3 -m jupyterhub
+ExecStart=/srv/jupyterhub/launch.sh
 
 [Install]
 # Start service when system boots
