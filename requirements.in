@@ -1,5 +1,5 @@
 jupyter-server==2.*
 jupyterhub==3.*
-jupyterlab==3.6.0rc0
+jupyterlab==3.6.*
 nbclassic
 ipyparallel

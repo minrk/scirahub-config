@@ -31,9 +31,9 @@ babel==2.11.0
     # via jupyterlab-server
 backcall==0.2.0
     # via ipython
-beautifulsoup4==4.11.1
+beautifulsoup4==4.11.2
     # via nbconvert
-bleach==5.0.1
+bleach==6.0.0
     # via nbconvert
 certifi==2022.12.7
     # via requests
@@ -49,7 +49,7 @@ comm==0.1.2
     # via ipykernel
 cryptography==39.0.0
     # via pyopenssl
-debugpy==1.6.5
+debugpy==1.6.6
     # via ipykernel
 decorator==5.1.1
     # via
@@ -67,7 +67,7 @@ fastjsonschema==2.16.2
     # via nbformat
 fqdn==1.5.1
     # via jsonschema
-greenlet==2.0.1
+greenlet==2.0.2
     # via sqlalchemy
 idna==3.4
     # via
@@ -85,14 +85,14 @@ importlib-resources==5.10.2
     # via
     #   alembic
     #   jsonschema
-ipykernel==6.20.2
+ipykernel==6.21.1
     # via
     #   ipyparallel
     #   nbclassic
     #   notebook
 ipyparallel==8.4.1
     # via -r requirements.in
-ipython==8.8.0
+ipython==8.9.0
     # via
     #   ipykernel
     #   ipyparallel
@@ -132,8 +132,9 @@ jupyter-client==7.4.9
     #   nbclassic
     #   nbclient
     #   notebook
-jupyter-core==5.1.3
+jupyter-core==5.2.0
     # via
+    #   ipykernel
     #   jupyter-client
     #   jupyter-server
     #   jupyterlab
@@ -146,7 +147,7 @@ jupyter-events==0.5.0
     # via
     #   jupyter-server
     #   jupyter-server-fileid
-jupyter-server==2.1.0
+jupyter-server==2.2.1
     # via
     #   -r requirements.in
     #   jupyter-server-fileid
@@ -163,10 +164,12 @@ jupyter-server-ydoc==0.6.1
 jupyter-telemetry==0.1.0
     # via jupyterhub
 jupyter-ydoc==0.2.2
-    # via jupyter-server-ydoc
-jupyterhub==3.1.0
+    # via
+    #   jupyter-server-ydoc
+    #   jupyterlab
+jupyterhub==3.1.1
     # via -r requirements.in
-jupyterlab==3.6.0rc0
+jupyterlab==3.6.0
     # via -r requirements.in
 jupyterlab-pygments==0.2.2
     # via nbconvert
@@ -185,14 +188,14 @@ matplotlib-inline==0.1.6
     #   ipython
 mistune==2.0.4
     # via nbconvert
-nbclassic==0.4.8
+nbclassic==0.5.1
     # via
     #   -r requirements.in
     #   jupyterlab
     #   notebook
 nbclient==0.7.2
     # via nbconvert
-nbconvert==7.2.8
+nbconvert==7.2.9
     # via
     #   jupyter-server
     #   nbclassic
@@ -238,7 +241,7 @@ pkgutil-resolve-name==1.3.10
     # via jsonschema
 platformdirs==2.6.2
     # via jupyter-core
-prometheus-client==0.15.0
+prometheus-client==0.16.0
     # via
     #   jupyter-server
     #   jupyterhub
@@ -315,7 +318,7 @@ sniffio==1.3.0
     # via anyio
 soupsieve==2.3.2.post1
     # via beautifulsoup4
-sqlalchemy==1.4.46
+sqlalchemy==2.0.1
     # via
     #   alembic
     #   jupyterhub
@@ -344,7 +347,7 @@ tornado==6.2
     #   terminado
 tqdm==4.64.1
     # via ipyparallel
-traitlets==5.8.1
+traitlets==5.9.0
     # via
     #   comm
     #   ipykernel
@@ -362,6 +365,8 @@ traitlets==5.8.1
     #   nbconvert
     #   nbformat
     #   notebook
+typing-extensions==4.4.0
+    # via sqlalchemy
 uri-template==1.2.0
     # via jsonschema
 urllib3==1.26.14
@@ -374,7 +379,7 @@ webencodings==0.5.1
     # via
     #   bleach
     #   tinycss2
-websocket-client==1.4.2
+websocket-client==1.5.0
     # via jupyter-server
 y-py==0.5.5
     # via
@@ -382,7 +387,7 @@ y-py==0.5.5
     #   ypy-websocket
 ypy-websocket==0.8.2
     # via jupyter-server-ydoc
-zipp==3.11.0
+zipp==3.12.0
     # via
     #   importlib-metadata
     #   importlib-resources
