@@ -77,6 +77,8 @@ for project_name, members in projects.items():
 
 c.JupyterHub.bind_url = "http://127.0.0.1:8000/rtc/"
 
+# default to hub home instead of spawning
+c.JupyterHub.default_url = "/rtc/hub/home"
 
 def pre_spawn_hook(spawner):
     group_names = {group.name for group in spawner.user.groups}
